@@ -34,23 +34,27 @@ public class PostParkingSpotActivity extends AppCompatActivity {
         rideShareCheckMark = (CheckBox) findViewById(R.id.rideShareCheckMark);
 
         Button sendLocationPostButton = (Button) findViewById(R.id.postParkingPostButton);
-        sendLocationPostButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ParkingMapsActivity.class);
-                Bundle extraLocationData = new Bundle();
-
-                extraLocationData.putString("type" , "Post");
-                extraLocationData.putString("parkingLot" , String.valueOf(parkingLotField.getText()));
-                extraLocationData.putString("descriptor" , String.valueOf(descriptorField.getText()));
-                extraLocationData.putBoolean("locationShare", locationShareCheckMark.isChecked());
-                extraLocationData.putBoolean("rideShare", rideShareCheckMark.isChecked());
-
-                intent.putExtras(extraLocationData);
-
-                startActivity(intent);
-            }
-        });
+//        sendLocationPostButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), ParkingMapsActivity.class);
+//                Bundle extraLocationData = new Bundle();
+//
+//                extraLocationData.putString("type" , "Post");
+//                extraLocationData.putString("parkingLot" , String.valueOf(parkingLotField.getText()));
+//                extraLocationData.putString("descriptor" , String.valueOf(descriptorField.getText()));
+//                extraLocationData.putBoolean("locationShare", locationShareCheckMark.isChecked());
+//                extraLocationData.putBoolean("rideShare", rideShareCheckMark.isChecked());
+//
+//                intent.putExtras(extraLocationData);
+//
+//                startActivity(intent);
+//            }
+//        });
     }
 
+    public void goToMessaging(View view) {
+        Intent intent = new Intent(this, ConfirmationPage.class);
+        startActivity(intent);
+    }
 }
