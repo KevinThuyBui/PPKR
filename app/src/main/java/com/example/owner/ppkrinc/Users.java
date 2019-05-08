@@ -16,6 +16,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -79,6 +81,8 @@ public class Users extends AppCompatActivity {
                 key = i.next().toString();
 //if(!key.equals(UserDetails.username) && key.equals(getIntent().getDataString("matchName"))) {
                 if(!key.equals(UserDetails.username)) {
+                    //FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance("https://ppkr-users.firebaseio.com/");
+                    //DatabaseReference ref = firebaseDatabase.getReference();
                     al.add(key);
                 }
 
@@ -95,6 +99,7 @@ public class Users extends AppCompatActivity {
         }
         else{
             noUsersText.setVisibility(View.GONE);
+
             usersList.setVisibility(View.VISIBLE);
             usersList.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, al));
         }
