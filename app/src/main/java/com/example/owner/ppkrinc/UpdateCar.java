@@ -74,7 +74,10 @@ public class UpdateCar extends AppCompatActivity {
                 Toast.makeText(UpdateCar.this,
                         "Car Information Updated",
                         Toast.LENGTH_SHORT).show();
+                finish();
             }
+
+
         });
     }
 

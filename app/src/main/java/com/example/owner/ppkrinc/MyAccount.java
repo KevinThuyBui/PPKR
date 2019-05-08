@@ -1,15 +1,19 @@
 package com.example.owner.ppkrinc;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -77,5 +81,22 @@ public class MyAccount extends AppCompatActivity {
         Intent intent = new Intent(this, UpdateCar.class);
         intent.putExtras(loginData);
         startActivity(intent);
+    }
+
+    public void updatePhoto(View view) {
+        Intent updatePhotoIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (updatePhotoIntent.resolveActivity(getPackageManager()) != null){
+            startActivityForResult(updatePhotoIntent,1);
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if (requestCode == 1 && resultCode == RESULT_OK){
+            Bundle extras = data.getExtras();
+            Bitmap imageBitmap = (Bitmap) extras.get("data");
+            ImageView profile = findViewById(R.id.profile_image);
+            profile.setImageBitmap(imageBitmap);
+        }
     }
 }

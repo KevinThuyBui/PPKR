@@ -29,26 +29,31 @@
 
     <string-array name="make_arrays">
         <item>Car Make</item>
-        <item>Toyota</item>
+        <item>Acura</item>
+        <item>Audi</item>
+        <item>BMW</item>
+        <item>Buick</item>
+        <item>Cadillac</item>
+        <item>Chevrolet</item>
+        <item>Chrysler</item>
+        <item>Dodge</item>
+        <item>Fiat</item>
+        <item>Ford</item>
+        <item>GMC</item>
         <item>Honda</item>
-        <item>Indonesia</item>
-        <item>France</item>
-        <item>Italy</item>
-        <item>Singapore</item>
-        <item>New Zealand</item>
-        <item>India</item>
+        <item>Lexus</item>
+        <item>Tesla</item>
+        <item>Toyota</item>
     </string-array>
 
     <string-array name="model_arrays">
         <item>Car Model</item>
-        <item>Malaysia</item>
-        <item>United States</item>
-        <item>Indonesia</item>
-        <item>France</item>
-        <item>Italy</item>
-        <item>Singapore</item>
-        <item>New Zealand</item>
-        <item>India</item>
+        <item>124 Spider</item>
+        <item>500</item>
+        <item>500L</item>
+        <item>500X</item>
+        <item>500e</item>
+
     </string-array>
     <string name="title_activity_home_page">PPKR Inc.</string>
     <string name="title_activity_register_page">User Registration</string>
