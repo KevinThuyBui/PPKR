@@ -14,17 +14,7 @@ public class    ConfirmationPage extends AppCompatActivity {
         setContentView(R.layout.activity_confirmation_page);
         extraMatchData = getIntent().getExtras();
 
-        Button confirmButton = (Button) findViewById(R.id.ConfirmMatch);
-        confirmButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MatchInformation.class);
 
-                intent.putExtras(extraMatchData);
-
-                startActivity(intent);
-            }
-        });
 
         Button cancelButton = (Button) findViewById(R.id.CancelMatch);
         cancelButton.setOnClickListener(new View.OnClickListener() {
@@ -34,5 +24,10 @@ public class    ConfirmationPage extends AppCompatActivity {
                 return;
             }
         });
+    }
+
+    public void goToMessaging(View view) {
+        Intent intent = new Intent(this, Users.class);
+        startActivity(intent);
     }
 }
