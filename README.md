@@ -1,6 +1,6 @@
 # PPKR
 
-This is an Android parking 
+This is a ride sharing and parking app for Android devices made for our senior project at CSULB. We aim to solve the congestion associated with finding parking in a full parking lot. Normally this would require driving around the parking lot until randomly finding a parking spot or by giving a ride to someone's parking spot. We aim to facilitate this transaction by connecting CSULB students to each other when you need a parking spot and eventually connecting two students with complementary arrival and departure times.
 
 ## Getting Started
 
@@ -11,7 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 Android Studios
-Android device
+Device running Android
 
 ### Installing
 
